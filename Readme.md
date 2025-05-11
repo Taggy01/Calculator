@@ -11,6 +11,11 @@ A simple, responsive calculator built using HTML, CSS, and JavaScript. This proj
 - Bracket support for complex expressions
 - Can handle errors
 
+## 🌐 Hosted Website
+
+- Added this file in the Netlify site and the hosted link is provided below :
+- https://calculator-bcet.netlify.app/
+
 ## 🛠️ Tech Stack
 
 - HTML
