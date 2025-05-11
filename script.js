@@ -12,6 +12,9 @@ function calculate() {
     converted = convertRoots(converted);
     converted = convertPower(converted);
     let result = eval(converted);
+    if (result === Infinity || result === -Infinity || isNaN(result)) {
+      throw new Error("Can't divide by 0");
+    }
     if (result % 1 !== 0) {
       const decimalPart = result.toString().split('.')[1];
       if (decimalPart && decimalPart.length > 4) {
@@ -21,8 +24,8 @@ function calculate() {
 
     expression = result.toString();
     document.getElementById('result').value = formatWithCommas(expression);
-  } catch {
-    document.getElementById('result').value = 'Error';
+  } catch(err) {
+    document.getElementById('result').value = err.message || 'Error';
     expression = '';
   }
 }
@@ -61,7 +64,6 @@ document.addEventListener('keydown', (event) => {
   const key = event.key;
 
   if (!isNaN(key)) {
-    // If it's a number (0–9)
     press(key);
   } else if (['+', '-', '*', '/', '.', '(', ')', '%', '^'].includes(key)) {
     press(key);
@@ -72,7 +74,6 @@ document.addEventListener('keydown', (event) => {
   } else if (key.toLowerCase() === 'c') {
     clearResult();
   } else if (key === 'r') {
-    // Custom shortcut for √ (root) — optional
     press('√');
   }
 });
