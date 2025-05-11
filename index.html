@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+   <link rel="stylesheet" href="style.css">
+   <!-- Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Symbol Import -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="Calculator-box">
+        <p class="p">CALCULATOR</p>
+        <div>
+            <input type="text" class="Output" id="result" disabled/>
+        </div>
+        <div >
+            <div>
+                <button class="type-2" onclick="press('^');">x<sup>y</sup></button>
+                <button class="type-2" onclick="press('√');">√</button>
+                <button class="type-2" onclick="press('(');">(</button>
+                <button class="type-2" onclick="press(')');">)</button>
+            </div>
+            <div>
+                <!-- <button class="type-2" onclick="Advance();"><i class="fas fa-expand-alt"></i></button> -->
+                <button class="type-4" onclick="clearResult();">AC</button>
+                <button class="type-5" onclick="remove();"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="type-2" onclick="press('%');">%</button>
+                <button class="type-2" onclick="press('/');">/</button>
+            </div>
+            <div>
+                <button class="type-1" onclick="press(7);">7</button>
+                <button class="type-1" onclick="press(8);">8</button>
+                <button class="type-1" onclick="press(9);">9</button>
+                <button class="type-2" onclick="press('*');">x</button>
+            </div>
+            <div>
+                <button class="type-1" onclick="press(4);">4</button>
+                <button class="type-1" onclick="press(5);">5</button>
+                <button class="type-1" onclick="press(6);">6</button>
+                <button class="type-2" onclick="press('-');">-</button>
+            </div>
+            <div>
+                <button class="type-1" onclick="press(1);">1</button>
+                <button class="type-1" onclick="press(2);">2</button>
+                <button class="type-1" onclick="press(3);">3</button>
+                <button class="type-2" onclick="press('+');">+</button>
+            </div>
+            <div>
+                <button class="type-1" onclick="press(0);">0</button>
+                <button class="type-1" onclick="press('.');">.</button>
+                <button class="type-3" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
