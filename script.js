@@ -20,7 +20,7 @@ function calculate() {
     }
 
     expression = result.toString();
-    document.getElementById('result').value = expression;
+    document.getElementById('result').value = formatWithCommas(expression);
   } catch {
     document.getElementById('result').value = 'Error';
     expression = '';
@@ -40,6 +40,9 @@ function insertMultiplication(expr){
 }
 function convertPower(expr){
   return expr.replace(/(\d+(\.\d+)?|\([^()]*\))\^(\d+(\.\d+)?|\([^()]*\))/g, 'Math.pow($1, $3)');
+}
+function formatWithCommas(number){
+  return Number(number).toLocaleString('en-US');
 }
 
 function remove(){
