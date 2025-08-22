@@ -33,10 +33,12 @@ A simple, responsive calculator built using HTML, CSS, and JavaScript. This proj
    git clone https://github.com/Taggy01/calculator.git
 Navigate to the project folder:
 
-bash
+```bash
 Copy
 Edit
 cd calculator
+```
+
 Open index.html in your browser.
 
 That’s it! The calculator will be ready to use.
