@@ -34,8 +34,6 @@ A simple, responsive calculator built using HTML, CSS, and JavaScript. This proj
 Navigate to the project folder:
 
 ```bash
-Copy
-Edit
 cd calculator
 ```
 
